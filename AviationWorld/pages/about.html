@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Skyline Aviation</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="about" data-base="../">
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow">About the project</p>
+        <h1>About Skyline Aviation</h1>
+        <p class="lead">A front-end project built with HTML, CSS and vanilla JavaScript. No frameworks, no images, no backend.</p>
+      </div>
+    </section>
+
+    <section class="container section reveal">
+      <h2>Milestones in flight</h2>
+      <ol class="timeline">
+        <li><b>1903</b> The Wright brothers make the first powered, controlled flight.</li>
+        <li><b>1952</b> The de Havilland Comet begins the jet-airliner age.</li>
+        <li><b>1969</b> Concorde and the Boeing 747 both make their first flights.</li>
+        <li><b>1976</b> Concorde enters commercial service.</li>
+        <li><b>2007</b> The Airbus A380 enters service.</li>
+        <li><b>2011</b> The Boeing 787 enters service.</li>
+      </ol>
+    </section>
+
+    <section class="container section reveal">
+      <h2>FAQ</h2>
+      <div class="faq" id="faq">
+        <details><summary>Is the data live?</summary><p>No. It is a static dataset in <code>js/data.js</code>, with approximate figures for illustration. Live data would need an external API.</p></details>
+        <details><summary>Can I add more aircraft or airlines?</summary><p>Yes. Add an object to the arrays in <code>js/data.js</code> and every page picks it up automatically.</p></details>
+        <details><summary>Does the contact form send email?</summary><p>No. Sending needs a backend or a form service. This form validates input and shows a confirmation in your browser only.</p></details>
+      </div>
+    </section>
+
+    <section class="container section reveal">
+      <h2>Contact (demo)</h2>
+      <form id="contact" class="form" novalidate>
+        <label>Name <input id="cname" required></label>
+        <label>Email <input id="cemail" type="email" required></label>
+        <label>Message <textarea id="cmsg" rows="4" required></textarea></label>
+        <button class="btn" type="submit">Send</button>
+        <p id="cstatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/data.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
