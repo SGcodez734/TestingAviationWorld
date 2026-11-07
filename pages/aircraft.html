@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aircraft — Skyline Aviation</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="aircraft" data-base="../">
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow">Fleet library</p>
+        <h1>Aircraft</h1>
+        <p class="lead">Search, filter and sort. Select any card for full specifications.</p>
+      </div>
+    </section>
+    <section class="container section">
+      <div class="toolbar">
+        <input type="search" id="q" placeholder="Search name or manufacturer…" aria-label="Search aircraft">
+        <select id="cat" aria-label="Category"></select>
+        <select id="maker" aria-label="Manufacturer"></select>
+        <select id="sort" aria-label="Sort">
+          <option value="name">Sort: Name</option>
+          <option value="range">Sort: Range</option>
+          <option value="pax">Sort: Capacity</option>
+          <option value="speed">Sort: Speed</option>
+          <option value="year">Sort: First flight</option>
+        </select>
+        <label class="slider">Min range: <output id="rangeOut">0</output> km
+          <input type="range" id="minRange" min="0" max="15000" step="500" value="0">
+        </label>
+        <button class="btn btn-ghost" id="reset" type="button">Reset</button>
+      </div>
+      <p class="muted" id="count" aria-live="polite"></p>
+      <div class="grid" id="list"></div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/data.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

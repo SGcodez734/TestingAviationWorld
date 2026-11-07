@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skyline Aviation — Aircraft & Airlines Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home" data-base="">
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="hero">
+      <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+      <div class="plane" aria-hidden="true">✈</div>
+      <div class="container hero-inner">
+        <p class="eyebrow">Explore the world of flight</p>
+        <h1>Discover the aircraft<br>and airlines that<br><span class="grad">connect the world.</span></h1>
+        <p class="lead">Browse specifications, compare ranges and explore global carriers, all in one place.</p>
+        <form id="hero-search" class="hero-search" role="search">
+          <input type="search" id="hero-q" placeholder="Search an aircraft, e.g. A350 or Boeing" aria-label="Search aircraft">
+          <button class="btn" type="submit">Search</button>
+        </form>
+        <div class="hero-actions">
+          <a class="btn btn-ghost" href="pages/aircraft.html">Browse Aircraft</a>
+          <a class="btn btn-ghost" href="pages/airlines.html">Explore Airlines</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container stats reveal">
+      <div class="stat"><b data-count="10">0</b><span>Aircraft types</span></div>
+      <div class="stat"><b data-count="10">0</b><span>Global airlines</span></div>
+      <div class="stat"><b data-count="3">0</b><span>Airline alliances</span></div>
+      <div class="stat"><b data-count="10">0</b><span>Airports in calculator</span></div>
+    </section>
+
+    <section class="container section reveal">
+      <div class="section-head">
+        <h2>Featured aircraft</h2>
+        <a href="pages/aircraft.html" class="link">View all →</a>
+      </div>
+      <div class="grid" id="featured"></div>
+    </section>
+
+    <section class="container section reveal">
+      <div class="calc">
+        <div>
+          <h2>Distance &amp; flight-time estimator</h2>
+          <p class="muted">Great-circle distance between two airports, with an estimated non-stop time for the aircraft you choose. Estimates only; real routings, winds and procedures differ.</p>
+        </div>
+        <form id="calc-form" class="calc-form">
+          <label>From <select id="from"></select></label>
+          <label>To <select id="to"></select></label>
+          <label>Aircraft <select id="calc-ac"></select></label>
+          <button class="btn" type="submit">Calculate</button>
+          <div id="calc-out" class="calc-out" aria-live="polite">Choose airports and press Calculate.</div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
